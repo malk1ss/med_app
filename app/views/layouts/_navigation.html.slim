@@ -1,0 +1,34 @@
+header
+  .px-3.py-2.text-bg-dark
+    .container
+      .d-flex.flex-wrap.align-items-center.justify-content-center.justify-content-lg-start
+        a.d-flex.align-items-center.my-2.my-lg-0.me-lg-auto.text-white.text-decoration-none href="/"
+          = 'MedProject'
+        ul.nav.col-12.col-lg-auto.my-2.justify-content-center.my-md-0.text-small
+          li
+            a.nav-link.text-secondary href="#"
+              = 'Home'
+          li
+            a.nav-link.text-white href="#"
+              = 'Dashboard'
+          li
+            a.nav-link.text-white href="#"
+              = 'Orders'
+          li
+            a.nav-link.text-white href="#"
+              = 'Products'
+          li
+            a.nav-link.text-white href="#"
+              = 'Customers'
+  .px-3.py-2.border-bottom.mb-3
+    .container.d-flex.flex-wrap.justify-content-center
+      form.col-12.col-lg-auto.mb-2.mb-lg-0.me-lg-auto role="search" 
+        input.form-control aria-label="Search" placeholder="Search..." type="search" /
+      .text-end
+      - if user_signed_in?
+        span
+          = "Здравствуйте #{current_user.email}"
+        = button_to "logout", destroy_user_session_path, method: :delete
+      - else
+        = link_to 'login', user_session_path
+
