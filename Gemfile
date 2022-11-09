@@ -73,6 +73,10 @@ end
 
 gem 'slim-rails', '~> 3.5', '>= 3.5.1'
 gem 'bootstrap', '~> 5.2.2'
-gem 'devise', '~> 4.8', '>= 4.8.1'
+gem 'devise'
 gem 'sprockets-rails'
 gem 'jquery-rails'
+gem 'activeadmin', '2.12.0'
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
