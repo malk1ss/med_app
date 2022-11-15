@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'persons#profile'
   get 'persons/profile', as: 'user_root'
   devise_for :admin_users, ActiveAdmin::Devise.config
   # devise_for :admin_users, ActiveAdmin::Devise.config

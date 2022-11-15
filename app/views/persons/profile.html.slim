@@ -1,2 +1,40 @@
-h1 Persons#profile
-p Find me in app/views/persons/profile.html.slim
+section.ftco-intro
+  .container
+    .row.no-gutters
+      .col-md-3.color-1.p-4
+        h3.mb-4 Emergency Cases
+        p A small river named Duden flows by their place and supplies
+        span.phone-number + (123) 456 7890
+      .col-md-3.color-2.p-4
+        h3.mb-4 Opening Hours
+        p.openinghours.d-flex
+          span Monday - Friday
+          span 8:00 - 19:00
+        p.openinghours.d-flex
+          span Saturday
+          span 10:00 - 17:00
+        p.openinghours.d-flex
+          span Sunday
+          span 10:00 - 16:00
+      .col-md-6.color-3.p-4
+        h3.mb-2 Make an Appointment
+        form.appointment-form action="#" 
+          .row
+            .col
+              .form-group
+                .select-wrap
+                  select.form-control id="" name="" 
+                    option value=""  Department
+                    option value=""  Teeth Whitening
+                    option value=""  Teeth CLeaning
+                    option value=""  Quality Brackets
+                    option value=""  Modern Anesthetic
+          .row
+            .col
+              .form-group
+                input.form-control.appointment_date placeholder="Date" type="text" /
+            .col
+              .form-group
+                input.form-control.appointment_time placeholder="Time" type="text" /
+          .form-group
+            input.btn.btn-primary type="submit" value=("Make an Appointment") /
