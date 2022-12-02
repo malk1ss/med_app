@@ -6,5 +6,10 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   get 'persons/profile'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-end
+
+  # get 'appoinments#show'
+
+  # resources :doctors do
+  #   resources :appoinments
+  # end
+  end

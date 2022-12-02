@@ -1,0 +1,27 @@
+<h1><%= @appoinment.title %></h1>
+
+<p><%= @appoinment.body %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_appoinment_path(@appoinment) %></li>
+  <li><%= link_to "Destroy", appoinment_path(@appoinment), data: {
+    turbo_method: :delete,
+      turbo_confirm: "Are you sure?"
+        } %></li>
+      </ul>
+
+      <h2>Add a comment:</h2>
+      <%= form_with model: [ @appoinment, @appoinment.comments.build ] do |form| %>
+        <p>
+          <%= form.label :appoinments %><br>
+          <%= form.text_field :appoinments %>
+        </p>
+        <p>
+          <%= form.label :body %><br>
+          <%= form.text_area :body %>
+        </p>
+        <p>
+          <%= form.submit %>
+        </p>
+      <% end %>
+
